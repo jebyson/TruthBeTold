@@ -10,10 +10,16 @@ public class Main {
             Scanner input = new Scanner(System.in);
             System.out.println("Welcome to the truth table creator!");
 
+            /*
             System.out.println("Please input the A variable for the expression");
             String aVal = input.nextLine();
             System.out.println("Please input the A variable for the expression");
             String bVal = input.nextLine();
+            */
+
+            char a = 'A';
+            char b = 'B';
+
             System.out.println("Please input your control expression.");
             System.out.println("Input '&' for and, '|' for or, '!' for not, or '=' for equals.");
             String ctrlExp = input.nextLine();
@@ -21,11 +27,10 @@ public class Main {
             String trueVal = "T";
             String falseVal = "F";
 
-            System.out.println("\nHere is your truth table:");
-
             if(ctrlExp.equals("&"))
             {
-                System.out.println(aVal + "\t" + bVal + "\t" + aVal + ctrlExp + bVal);
+                System.out.println("\nHere is your truth table:");
+                System.out.println(a + "\t" + b + "\t" + a + ctrlExp + b);
                 System.out.println(trueVal + "\t" + trueVal + "\t" + trueVal);
                 System.out.println(trueVal + "\t" + falseVal + "\t" + falseVal);
                 System.out.println(falseVal + "\t" + trueVal + "\t" + falseVal);
@@ -33,7 +38,8 @@ public class Main {
             }
             else if(ctrlExp.equals("|"))
             {
-                System.out.println(aVal + "\t" + bVal + "\t" + aVal + ctrlExp + bVal);
+                System.out.println("\nHere is your truth table:");
+                System.out.println(a + "\t" + b + "\t" + a + ctrlExp + b);
                 System.out.println(trueVal + "\t" + trueVal + "\t" + trueVal);
                 System.out.println(trueVal + "\t" + falseVal + "\t" + trueVal);
                 System.out.println(falseVal + "\t" + trueVal + "\t" + trueVal);
@@ -41,19 +47,26 @@ public class Main {
             }
             else if(ctrlExp.equals("!"))
             {
-                System.out.println(aVal + "\t" + bVal + "\t" + aVal + ctrlExp + bVal);
+                System.out.println("\nHere is your truth table:");
+                System.out.println(a + "\t" + b + "\t" + a + ctrlExp + b);
                 System.out.println(trueVal + "\t" + trueVal + "\t" + falseVal);
                 System.out.println(trueVal + "\t" + falseVal + "\t" + trueVal);
                 System.out.println(falseVal + "\t" + trueVal + "\t" + trueVal);
                 System.out.println(falseVal + "\t" + falseVal + "\t" + falseVal);
             }
-            if(ctrlExp.equals("="))
+            else if(ctrlExp.equals("="))
             {
-                System.out.println(aVal + "\t" + bVal + "\t" + aVal + ctrlExp + bVal);
+                System.out.println("\nHere is your truth table:");
+                System.out.println(a + "\t" + b + "\t" + a + ctrlExp + b);
                 System.out.println(trueVal + "\t" + trueVal + "\t" + trueVal);
                 System.out.println(trueVal + "\t" + falseVal + "\t" + falseVal);
                 System.out.println(falseVal + "\t" + trueVal + "\t" + falseVal);
                 System.out.println(falseVal + "\t" + falseVal + "\t" + trueVal);
+            }
+            else
+            {
+                System.out.println("Sorry, that is an invalid expression. Goodbye!");
+                break;
             }
 
             System.out.println("\nEnter '0' if you would like to try again. Enter '1' if you would like to exit.");
