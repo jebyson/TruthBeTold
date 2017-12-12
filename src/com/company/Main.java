@@ -23,13 +23,13 @@ public class Main {
             if(ctrlExp.equals("&"))
             {
                 System.out.println("\nHere is your truth table:");
-                System.out.println(a + "\t" + b + "\t" + a + ctrlExp + b);
+                System.out.println(a + "\t" + b + "\t" + a + ctrlExp + ctrlExp + b);
                 test.and();
             }
             else if(ctrlExp.equals("|"))
             {
                 System.out.println("\nHere is your truth table:");
-                System.out.println(a + "\t" + b + "\t" + a + ctrlExp + b);
+                System.out.println(a + "\t" + b + "\t" + a + ctrlExp + ctrlExp + b);
                 test.or();
             }
             else if(ctrlExp.equals("!"))
@@ -41,7 +41,7 @@ public class Main {
             else if(ctrlExp.equals("="))
             {
                 System.out.println("\nHere is your truth table:");
-                System.out.println(a + "\t" + b + "\t" + a + ctrlExp + b);
+                System.out.println(a + "\t" + b + "\t" + a + ctrlExp + ctrlExp + b);
                 test.equal();
             }
             else
@@ -51,12 +51,12 @@ public class Main {
             }
 
             System.out.println("\nEnter '0' if you would like to try again. Enter '1' if you would like to exit.");
-            int continueOrNot = input.nextInt();
-            if(continueOrNot == 0)
+            String continueOrNot = input.next();
+            if(continueOrNot.equals("0"))
             {
                 System.out.println("Thank you for playing again!\n");
             }
-            else if(continueOrNot == 1)
+            else if(continueOrNot.equals("1"))
             {
                 System.out.println("Goodbye!");
                 j++;

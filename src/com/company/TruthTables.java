@@ -6,41 +6,36 @@ public class TruthTables {
     private char b = 'B';
     private String trueVal = "T";
     private String falseVal = "F";
-    private String blank = "";
 
-    public String and()
+    public void and()
     {
         System.out.println(trueVal + "\t" + trueVal + "\t" + trueVal);
         System.out.println(trueVal + "\t" + falseVal + "\t" + falseVal);
         System.out.println(falseVal + "\t" + trueVal + "\t" + falseVal);
         System.out.println(falseVal + "\t" + falseVal + "\t" + falseVal);
-        return blank;
     }
 
-    public String or()
+    public void or()
     {
         System.out.println(trueVal + "\t" + trueVal + "\t" + trueVal);
         System.out.println(trueVal + "\t" + falseVal + "\t" + trueVal);
         System.out.println(falseVal + "\t" + trueVal + "\t" + trueVal);
         System.out.println(falseVal + "\t" + falseVal + "\t" + falseVal);
-        return blank;
     }
 
-    public String not()
+    public void not()
     {
         System.out.println(trueVal + "\t" + trueVal + "\t" + falseVal);
         System.out.println(trueVal + "\t" + falseVal + "\t" + trueVal);
         System.out.println(falseVal + "\t" + trueVal + "\t" + trueVal);
         System.out.println(falseVal + "\t" + falseVal + "\t" + falseVal);
-        return blank;
     }
 
-    public String equal()
+    public void equal()
     {
         System.out.println(trueVal + "\t" + trueVal + "\t" + trueVal);
         System.out.println(trueVal + "\t" + falseVal + "\t" + falseVal);
         System.out.println(falseVal + "\t" + trueVal + "\t" + falseVal);
         System.out.println(falseVal + "\t" + falseVal + "\t" + trueVal);
-        return blank;
     }
 }
