@@ -35,7 +35,7 @@ public class Main {
             else if(ctrlExp.equals("!"))
             {
                 System.out.println("\nHere is your truth table:");
-                System.out.println(a + "\t" + b + "\t" + a + ctrlExp + b);
+                System.out.println(a + "\t" + b + "\t" + a + "&&" + ctrlExp + b);
                 test.not();
             }
             else if(ctrlExp.equals("="))
